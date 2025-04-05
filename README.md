@@ -1,4 +1,4 @@
-# FLAC Recompressor
+# reflac
 
 A Python script to recompress FLAC audio files in a specified directory using the FLAC command-line tool. It processes files in parallel with a configurable compression level and provides a progress bar with success/failure tracking.
 
@@ -15,8 +15,7 @@ A Python script to recompress FLAC audio files in a specified directory using th
 
 - **Python 3.6+**: Required to run the script.
 - **FLAC**: The FLAC command-line tool must be installed and available in your system PATH.
-  - On Windows: Download from [Xiph.org](https://xiph.org/flac/download.html) or install via package managers like Chocolatey (`choco install flac`).
-  - On macOS: Install via Homebrew (`brew install flac`).
+  - On Windows: Download from [Xiph.org](https://xiph.org/flac/download.html).
   - On Linux: Install via your package manager (e.g., `sudo apt install flac` on Ubuntu).
 - **Colorama**: Python library for colored terminal output (`pip install colorama`).
 
@@ -24,8 +23,8 @@ A Python script to recompress FLAC audio files in a specified directory using th
 
 1. Clone or download this repository:
    ```bash
-   git clone https://github.com/yourusername/flac-recompressor.git
-   cd flac-recompressor
+   git clone https://github.com/rubic-codes/reflac.git
+   cd reflac
    ```
 2. Install the required Python dependency:
    ```bash
@@ -44,13 +43,13 @@ Run the script from the command line with optional arguments:
 ### Basic Usage
 Recompress FLAC files in the current directory with default compression level (5):
 ```bash
-python recompress_flac.py
+python reflac.py
 ```
 
 ### Specify Directory and Compression Level
 Recompress FLAC files in a specific directory with a custom compression level (e.g., 8):
 ```bash
-python recompress_flac.py -d /path/to/music -c 8
+python reflac.py -d /path/to/music -c 8
 ```
 
 ### Command-Line Options
@@ -61,7 +60,6 @@ python recompress_flac.py -d /path/to/music -c 8
 ```
 Searching for FLAC files in: /path/to/music
 Located 20 FLAC files.
-
 Directory scanned: /path/to/music
 Files found: 20
 Compression level: 5
